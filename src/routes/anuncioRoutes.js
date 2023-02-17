@@ -1,12 +1,12 @@
 import express from "express";
-import anuncioConroller from "../controllers/anuncioController.js";
+import anuncioController from "../controllers/anuncioController.js";
 
 const anuncioRoutes = express.Router();
 
 anuncioRoutes
-  .get("/anuncios", anuncioConroller.getAnuncios)
-  .get("/anuncios/:id", anuncioConroller.getAnuncio)
-  .post("/anuncios", anuncioConroller.createAnuncio)
-  .patch("/anuncios/:id", anuncioConroller.updateAnuncio)
-  .delete("/anuncios/:id", anuncioConroller.deleteAnuncio);
+  .get("/anuncios", anuncioController.getAnuncios)
+  .get("/anuncios/:id", anuncioController.getAnuncio)
+  .post("/anuncios", anuncioController.createAnuncio)
+  .patch("/anuncios/:id", anuncioController.updateAnuncio)
+  .delete("/anuncios/:id", anuncioController.deleteAnuncio);
 export default anuncioRoutes;

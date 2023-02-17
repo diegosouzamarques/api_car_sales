@@ -1,5 +1,9 @@
 import express from "express";
 import anuncioRoutes from "./anuncioRoutes.js";
+import vendedorRoutes from "./vendedorRoutes.js";
+import categoriaRoutes from "./categoriaRoutes.js";
+import fotoRoutes from "./fotoRoutes.js";
+import tipoRoutes from "./tipoRoutes.js";
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
@@ -8,7 +12,11 @@ const routes = (app) => {
 
     app.use(
         express.json(),
-        anuncioRoutes
+        anuncioRoutes,
+        vendedorRoutes,
+        categoriaRoutes,
+        fotoRoutes,
+        tipoRoutes
     )
 }
 
