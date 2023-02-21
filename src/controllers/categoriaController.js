@@ -4,7 +4,7 @@ import {
   getAllCategoria,
   getCategoriaById,
   updateCategoria,
-} from "../servico/categoria.js";
+} from "../servico/categoria/categoria.js";
 
 class CategoriaController {
   static getCategorias = async (req, res) => {

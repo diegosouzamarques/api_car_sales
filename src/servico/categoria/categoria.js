@@ -1,4 +1,4 @@
-import categoria from "../models/categoria.js";
+import categoria from "../../models/categoria.js";
 
 async function getAllCategoria() {
     try {
@@ -20,6 +20,11 @@ async function getAllCategoria() {
 
   async function createCategoria(newCategoria) {
     try {
+      const find = await categoria.findOne({categoria: newCategoria.categoria });
+      console.log(find);
+      if (find){
+        throw new Error('Categoria já cadastrada');
+      }
       const newDoc = new categoria({ ...newCategoria });
       await newDoc.save();
       return true;
