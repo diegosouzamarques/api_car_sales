@@ -4,7 +4,9 @@ import {
   getAllFoto,
   getFotoById,
   updateFoto,
-} from "../servico/foto.js";
+} from "../servico/foto/foto.js";
+
+import {decode} from 'html-entities';
 
 class FotoController {
   static getFotos = async (req, res) => {
@@ -34,6 +36,7 @@ class FotoController {
     try {
       const fotoNew = req.body;
       if (fotoNew) {
+        fotoNew.url = decode(fotoNew.url);
         if (await createFoto(fotoNew)) {
           res.status(201).send();
           return;
@@ -54,6 +57,7 @@ class FotoController {
       const fotoUpdate = req.body;
       const id = req.params.id;
       if (id && fotoUpdate) {
+        fotoUpdate.url = decode(fotoUpdate.url);
         let achou = await updateFoto(id, fotoUpdate);
         if (achou) {
           res.status(204).json(achou);

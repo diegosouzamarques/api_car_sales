@@ -1,4 +1,4 @@
-import foto from "../models/foto.js";
+import foto from "../../models/foto.js";
 
 async function getAllFoto() {
     try {

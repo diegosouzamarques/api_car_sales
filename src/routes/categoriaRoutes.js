@@ -1,6 +1,6 @@
 import express from "express";
 import categoriaController from "../controllers/categoriaController.js";
-import { checkCategoria, checkIdCategoria, validationCreateUpdateCategoria } from "../servico/categoria/categoria.validators.js";
+import { checkCategoria, checkIdCategoria, validationCreateUpdateCategoria } from "../servico/categoria/categoria.validator.js";
 
 const categoriaRoutes = express.Router();
 
