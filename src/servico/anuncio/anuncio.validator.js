@@ -1,8 +1,16 @@
-import { body, validationResult } from "express-validator";
+import { body, param, validationResult } from "express-validator";
 import { ObjectId } from "mongodb";
 import { getCategoriaById } from "../categoria.js";
 import { getTipoById } from "../tipo.js";
 import { getVendedorById } from "../vendedor.js";
+
+const checkIdAnunio = [
+  param("id")
+  .exists()
+  .withMessage("ID anúncio não informado")
+  .isMongoId()
+  .withMessage("ID anúncio formato não previsto")
+];
 
 const validationCreateUpdateAnuncio = (optional = false) => {
   return [
@@ -117,4 +125,4 @@ const onlyOneProperties = (req, res, next) => {
   next();
 };
 
-export { onlyOneProperties, checkAnuncio, validationCreateUpdateAnuncio };
+export { checkIdAnunio, onlyOneProperties, checkAnuncio, validationCreateUpdateAnuncio };
