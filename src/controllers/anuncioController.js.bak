@@ -4,7 +4,7 @@ import {
   getAllAnuncio,
   getAnucioById,
   updateAnuncio,
-} from "../servico/anuncio/anuncio.js";
+} from "../servico/anuncio.js";
 
 class AnuncioController {
   static getAnuncios = async (req, res) => {

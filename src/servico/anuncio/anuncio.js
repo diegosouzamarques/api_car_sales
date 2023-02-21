@@ -1,7 +1,7 @@
-import anuncio from "../models/anuncio.js";
-import vendedor from "../models/vendedor.js";
-import tipo from "../models/tipo.js";
-import categoria from "../models/categoria.js";
+import anuncio from "../../models/anuncio.js";
+import vendedor from "../../models/vendedor.js";
+import tipo from "../../models/tipo.js";
+import categoria from "../../models/categoria.js";
 
 async function getAllAnuncio() {
   try {
