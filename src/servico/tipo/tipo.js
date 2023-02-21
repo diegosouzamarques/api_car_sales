@@ -1,4 +1,4 @@
-import tipo from "../models/tipo.js";
+import tipo from "../../models/tipo.js";
 
 async function getAllTipo() {
     try {

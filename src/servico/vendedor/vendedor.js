@@ -1,4 +1,4 @@
-import vendedor from "../models/vendedor.js";
+import vendedor from "../../models/vendedor.js";
 
 async function getAllVendedor() {
     try {

@@ -1,8 +1,8 @@
 import { body, param, validationResult } from "express-validator";
 import { ObjectId } from "mongodb";
 import { getCategoriaById } from "../categoria/categoria.js";
-import { getTipoById } from "../tipo.js";
-import { getVendedorById } from "../vendedor.js";
+import { getTipoById } from "../tipo/tipo.js";
+import { getVendedorById } from "../vendedor/vendedor.js";
 
 const checkIdAnunio = [
   param("id")

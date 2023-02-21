@@ -4,7 +4,7 @@ import {
   getAllVendedor,
   getVendedorById,
   updateVendedor,
-} from "../servico/vendedor.js";
+} from "../servico/vendedor/vendedor.js";
 
 class VendedorController {
   static getVendedores = async (req, res) => {

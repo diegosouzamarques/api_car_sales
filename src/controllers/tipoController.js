@@ -4,7 +4,7 @@ import {
   getAllTipo,
   getTipoById,
   updateTipo,
-} from "../servico/tipo.js";
+} from "../servico/tipo/tipo.js";
 
 class TipoController {
   static getTipos = async (req, res) => {
