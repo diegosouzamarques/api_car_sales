@@ -4,6 +4,8 @@ import vendedorRoutes from "./vendedorRoutes.js";
 import categoriaRoutes from "./categoriaRoutes.js";
 import fotoRoutes from "./fotoRoutes.js";
 import tipoRoutes from "./tipoRoutes.js";
+import authRoutes from "./auth/auth.routes.js";
+import userRoutes from "./auth/user.routes.js";
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
@@ -16,7 +18,9 @@ const routes = (app) => {
         vendedorRoutes,
         categoriaRoutes,
         fotoRoutes,
-        tipoRoutes
+        tipoRoutes,
+        authRoutes,
+        userRoutes
     )
 }
 

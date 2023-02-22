@@ -21,7 +21,6 @@ async function getAllCategoria() {
   async function createCategoria(newCategoria) {
     try {
       const find = await categoria.findOne({categoria: newCategoria.categoria });
-      console.log(find);
       if (find){
         throw new Error('Categoria já cadastrada');
       }

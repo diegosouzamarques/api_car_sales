@@ -20,10 +20,19 @@ async function getAllUser() {
     }
   }
 
+  async function getUserFindOne(where={}) {
+    try {
+      return await user
+        .findOne({...where})
+        .populate({ path: "roles", select: "id, name", model: role });
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
   async function createUser(newUser) {
     try {
-      const find = await user.findOne({email: newCategoria.email });
-      console.log(find);
+      const find = await user.findOne({email: newUser.email });
       if (find){
         throw new Error('Email já cadastrada');
       }
@@ -61,4 +70,5 @@ async function getAllUser() {
     createUser,
     updateUser,
     deleteUser,
+    getUserFindOne
   };
