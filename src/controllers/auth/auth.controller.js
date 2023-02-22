@@ -47,8 +47,8 @@ class authController {
         message: "Invalid Password!",
       });
     }
-  
-    var token = jwt.sign({ id: user.id }, config.secret, {
+   
+    var token = jwt.sign({ id: user.id }, config.secretKey, {
       expiresIn: config.jwtExpiration
     });
 
@@ -95,7 +95,7 @@ class authController {
       }
   
       const user = refreshToken.userID._id;
-      let newAccessToken = jwt.sign({ id: user }, config.secret, {
+      let newAccessToken = jwt.sign({ id: user }, config.secretKey, {
         expiresIn: config.jwtExpiration,
       });
       let newRefreshToken = await createToken({_id: user});
