@@ -47,8 +47,8 @@ class authController {
         message: "Invalid Password!",
       });
     }
-   
-    var token = jwt.sign({ id: user.id }, config.secretKey, {
+
+    var token = jwt.sign({ id: user._id }, config.secretKey, {
       expiresIn: config.jwtExpiration
     });
 
