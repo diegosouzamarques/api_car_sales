@@ -5,8 +5,8 @@ import {verifySignUp} from "../../authEngine/index.js"
 const authRoutes = express.Router();
 
 authRoutes
-.post("/auth/signup",[verifySignUp.checkDuplicateUsernameOrEmail, verifySignUp.checkRolesExisted],authController.signup)
-.post("/auth/signin", authController.signin)
-.post("/auth/refreshtoken", authController.refreshToken);
+.post("/signup",[verifySignUp.checkDuplicateUsernameOrEmail, verifySignUp.checkRolesExisted],authController.signup)
+.post("/signin", authController.signin)
+.post("/refreshtoken", authController.refreshToken);
    
 export default authRoutes;

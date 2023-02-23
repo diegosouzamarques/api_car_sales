@@ -5,9 +5,9 @@ import userController from "../../controllers/auth/user.controller.js";
 const userRoutes = express.Router();
 
 userRoutes
-.get("/test/all", userController.allAccess)
-.get("/test/user",[authJwt.verifyToken], userController.userBoard)
-.get("/test/mod",[authJwt.verifyToken, authJwt.isModerator], userController.moderatorBoard)
-.get("/test/admin",[authJwt.verifyToken, authJwt.isAdmin], userController.adminBoard)
+.get("/all", userController.allAccess)
+.get("/user", userController.userBoard)
+.get("/mod", authJwt.isModerator, userController.moderatorBoard)
+.get("/admin", authJwt.isAdmin, userController.adminBoard)
 
 export default userRoutes;
