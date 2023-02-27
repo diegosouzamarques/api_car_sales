@@ -7,8 +7,8 @@ const tipoRoutes = express.Router();
 
 tipoRoutes
   .get("/", authJwt.isModeratorOrAdmin, tipoController.getTipos)
-  .get("/:id", authJwt.isModeratorOrAdmin, checkIdTipo, checkTipo, tipoController.getTipo)
+  .get("/id", authJwt.isModeratorOrAdmin, checkIdTipo, checkTipo, tipoController.getTipo)
   .post("/", authJwt.isAdmin, validationCreateUpdateTipo, checkTipo, tipoController.createTipo)
-  .patch("/:id",  authJwt.isAdmin, checkIdTipo, validationCreateUpdateTipo, checkTipo, tipoController.updateTipo)
-  .delete("/:id",  authJwt.isAdmin, checkIdTipo, checkTipo, tipoController.deleteTipo);
+  .patch("/id",  authJwt.isAdmin, checkIdTipo, validationCreateUpdateTipo, checkTipo, tipoController.updateTipo)
+  .delete("/id",  authJwt.isAdmin, checkIdTipo, checkTipo, tipoController.deleteTipo);
 export default tipoRoutes;

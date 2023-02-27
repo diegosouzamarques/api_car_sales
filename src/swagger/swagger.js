@@ -240,8 +240,9 @@ const swaggerDocument = {
         },
       },
     },
-    "/anuncios": {
+    "/anuncios": { 
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Lista todos anúncios cadastrados.",
         tags: ["Anúncios"],
         description: "Retorna uma lista de anúncios.",
@@ -354,6 +355,7 @@ const swaggerDocument = {
         },
       },
       post: {
+        security: [ { "JWT": [] } ],
         summary: "Cadastrar anúncio.",
         tags: ["Anúncios"],
         description: "Realiza o cadastrado de um anúncio.",
@@ -470,8 +472,9 @@ const swaggerDocument = {
         },
       },
     },
-    "/anuncios/{:id}": {
+    "/anuncios/{id}": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Retorna um anúncio.",
         tags: ["Anúncios"],
         description:
@@ -597,6 +600,7 @@ const swaggerDocument = {
         },
       },
       patch: {
+        security: [ { "JWT": [] } ],
         summary: "Alterar anúncio.",
         tags: ["Anúncios"],
         description: "Possivel atualizar alguma informação um anúncio.",
@@ -724,6 +728,7 @@ const swaggerDocument = {
         },
       },
       delete: {
+        security: [ { "JWT": [] } ],
         summary: "Excluir anúncio.",
         tags: ["Anúncios"],
         description: "Possivel excluir um anúncio.",
@@ -809,6 +814,7 @@ const swaggerDocument = {
     },
     "/vendedores": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Lista todos vendedores cadastrados.",
         tags: ["Vendedores"],
         description: "Retorna uma lista de vendedores.",
@@ -890,6 +896,7 @@ const swaggerDocument = {
         },
       },
       post: {
+        security: [ { "JWT": [] } ],
         summary: "Cadastrar vendedor.",
         tags: ["Vendedores"],
         description: "Realiza o cadastrado de um vendedor.",
@@ -992,8 +999,9 @@ const swaggerDocument = {
         },
       },
     },
-    "/vendedores/{:id}": {
+    "/vendedores/{id}": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Retorna um vendedor.",
         tags: ["Vendedores"],
         description:
@@ -1102,6 +1110,7 @@ const swaggerDocument = {
         },
       },
       patch: {
+        security: [ { "JWT": [] } ],
         summary: "Alterar vendedor.",
         tags: ["Vendedores"],
         description: "Possivel atualizar alguma informação de um vendedor.",
@@ -1209,6 +1218,7 @@ const swaggerDocument = {
         },
       },
       delete: {
+        security: [ { "JWT": [] } ],
         summary: "Excluir vendedor.",
         tags: ["Vendedores"],
         description: "Possivel excluir um vendedor.",
@@ -1294,6 +1304,7 @@ const swaggerDocument = {
     },
     "/categorias": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Lista todos categorias cadastrados.",
         tags: ["Categorias"],
         description: "Retorna uma lista de categorias.",
@@ -1395,6 +1406,7 @@ const swaggerDocument = {
         },
       },
       post: {
+        security: [ { "JWT": [] } ],
         summary: "Cadastrar categoria.",
         tags: ["Categorias"],
         description: "Realiza o cadastrado de uma categoria.",
@@ -1497,8 +1509,9 @@ const swaggerDocument = {
         },
       },
     },
-    "/categorias/{:id}": {
+    "/categorias/{id}": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Retorna uma categoria.",
         tags: ["Categorias"],
         description:
@@ -1607,6 +1620,7 @@ const swaggerDocument = {
         },
       },
       patch: {
+        security: [ { "JWT": [] } ],
         summary: "Alterar categoria.",
         tags: ["Categorias"],
         description: "Possivel atualizar alguma informação de uma categoria.",
@@ -1714,6 +1728,7 @@ const swaggerDocument = {
         },
       },
       delete: {
+        security: [ { "JWT": [] } ],
         summary: "Excluir categoria.",
         tags: ["Categorias"],
         description: "Possivel excluir um categoria.",
@@ -1799,6 +1814,7 @@ const swaggerDocument = {
     },
     "/fotos": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Lista todos fotos cadastradas.",
         tags: ["Fotos"],
         description: "Retorna uma lista de fotos.",
@@ -1878,6 +1894,7 @@ const swaggerDocument = {
         },
       },
       post: {
+        security: [ { "JWT": [] } ],
         summary: "Cadastrar fotos.",
         tags: ["Fotos"],
         description: "Realiza o cadastrado de fotos de anúncios.",
@@ -1991,8 +2008,9 @@ const swaggerDocument = {
         },
       },
     },
-    "/fotos/{:id}": {
+    "/fotos/{id}": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Retorna uma foto.",
         tags: ["Fotos"],
         description: "Retorna única foto cadastrada localizada através do ID.",
@@ -2101,6 +2119,7 @@ const swaggerDocument = {
         },
       },
       patch: {
+        security: [ { "JWT": [] } ],
         summary: "Alterar foto.",
         tags: ["Fotos"],
         description: "Possivel atualizar alguma informação de uma foto.",
@@ -2215,6 +2234,7 @@ const swaggerDocument = {
         },
       },
       delete: {
+        security: [ { "JWT": [] } ],
         summary: "Excluir foto.",
         tags: ["Fotos"],
         description: "Possivel excluir uma foto.",
@@ -2300,6 +2320,7 @@ const swaggerDocument = {
     },
     "/tipos": {
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Lista todos tipos cadastradas.",
         tags: ["Tipos"],
         description: "Retorna uma lista de tipos.",
@@ -2381,6 +2402,7 @@ const swaggerDocument = {
         },
       },
       post: {
+        security: [ { "JWT": [] } ],
         summary: "Cadastrar tipos.",
         tags: ["Tipos"],
         description: "Realiza o cadastrado de tipos de anúncios.",
@@ -2483,8 +2505,9 @@ const swaggerDocument = {
         },
       },
     },
-    "/tipos/{:id}":{
+    "/tipos/{id}":{
       get: {
+        security: [ { "JWT": [] } ],
         summary: "Retorna um tipo.",
         tags: ["Tipos"],
         description:
@@ -2593,6 +2616,7 @@ const swaggerDocument = {
         },
       },
       patch: {
+        security: [ { "JWT": [] } ],
         summary: "Alterar tipo.",
         tags: ["Tipos"],
         description: "Possivel atualizar alguma informação de um tipo.",
@@ -2700,6 +2724,7 @@ const swaggerDocument = {
         },
       },  
       delete: {
+        security: [ { "JWT": [] } ],
         summary: "Excluir tipo.",
         tags: ["Tipos"],
         description: "Possivel excluir um tipo.",
@@ -2785,6 +2810,13 @@ const swaggerDocument = {
     }
   },
   components: {
+    securitySchemes: {
+      JWT: {
+        type: "apiKey",
+        in: "header",
+        name: "x-access-token",
+      },
+    },
     schemas: {
       errors: {
         type: "object",

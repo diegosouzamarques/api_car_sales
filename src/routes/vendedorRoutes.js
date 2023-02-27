@@ -7,8 +7,8 @@ const vendedorRoutes = express.Router();
 
 vendedorRoutes
   .get("/", authJwt.isModeratorOrAdmin, vendedorController.getVendedores)
-  .get("/:id", authJwt.isModeratorOrAdmin, checkIdVendedor, checkVendedor, vendedorController.getVendedor)
+  .get("/id", authJwt.isModeratorOrAdmin, checkIdVendedor, checkVendedor, vendedorController.getVendedor)
   .post("/", authJwt.isAdmin, validationCreateUpdateVendedor, checkVendedor, vendedorController.createVendedor)
-  .patch("/:id", authJwt.isAdmin, checkIdVendedor, validationCreateUpdateVendedor, checkVendedor, vendedorController.updateVendedor)
-  .delete("/:id", authJwt.isAdmin, checkIdVendedor, checkVendedor, vendedorController.deleteVendedor);
+  .patch("/id", authJwt.isAdmin, checkIdVendedor, validationCreateUpdateVendedor, checkVendedor, vendedorController.updateVendedor)
+  .delete("/id", authJwt.isAdmin, checkIdVendedor, checkVendedor, vendedorController.deleteVendedor);
 export default vendedorRoutes;
