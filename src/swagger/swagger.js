@@ -21,7 +21,7 @@ const swaggerDocument = {
     "/auth/signup": {
       post: {
         summary: "Cadastro de usuário.",
-        tags: ["Usuário"],
+        tags: ["Auth"],
         description: "Cadastro de usuário",
         requestBody: {
           content: {
@@ -101,7 +101,7 @@ const swaggerDocument = {
     "/auth/signin": {
       post: {
         summary: "Login de usuário para obter token.",
-        tags: ["Usuário"],
+        tags: ["Auth"],
         description: "Login de usuário para obter token",
         requestBody: {
           content: {
@@ -171,7 +171,7 @@ const swaggerDocument = {
     "/auth/refreshtoken": {
       post: {
         summary: "Atualizar o token após expiração utilizando o refreshtoken.",
-        tags: ["Usuário"],
+        tags: ["Auth"],
         description: "Atualização do token utilizando o refreshtoken",
         requestBody: {
           content: {
