@@ -8,7 +8,7 @@ const fotoRoutes = express.Router();
 fotoRoutes
   .get("/", authJwt.isModeratorOrAdmin, fotoController.getFotos)
   .get("/:id", authJwt.isModeratorOrAdmin, checkIdFoto, checkFoto, fotoController.getFoto)
-  .post("/", authJwt.isAdmin, validationCreateUpdateFoto(), checkFoto,fotoController.createFoto)
-  .patch("/:id",  authJwt.isAdmin, checkIdFoto, onlyOneProperties, validationCreateUpdateFoto(true), checkFoto, fotoController.updateFoto)
+  .post("/", authJwt.isModeratorOrAdmin, validationCreateUpdateFoto(), checkFoto,fotoController.createFoto)
+  .patch("/:id",  authJwt.isModeratorOrAdmin, checkIdFoto, onlyOneProperties, validationCreateUpdateFoto(true), checkFoto, fotoController.updateFoto)
   .delete("/:id",  authJwt.isAdmin, checkIdFoto, checkFoto, fotoController.deleteFoto);
 export default fotoRoutes;

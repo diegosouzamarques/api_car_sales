@@ -18,6 +18,7 @@
     "html-entities": "^2.3.3",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.1",
+    "swagger-ui-express": "^4.6.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
