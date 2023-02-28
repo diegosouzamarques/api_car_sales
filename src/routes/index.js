@@ -4,7 +4,6 @@ import categoriaRoutes from "./categoriaRoutes.js";
 import fotoRoutes from "./fotoRoutes.js";
 import tipoRoutes from "./tipoRoutes.js";
 import authRoutes from "./auth/auth.routes.js";
-import userRoutes from "./auth/user.routes.js";
 import {authJwt}from "../authEngine/index.js";
 
 const routes = (app) => {
@@ -18,7 +17,6 @@ const routes = (app) => {
   app.use("/categorias", authJwt.verifyToken, categoriaRoutes);
   app.use("/fotos", authJwt.verifyToken, fotoRoutes);
   app.use("/tipos", authJwt.verifyToken, tipoRoutes);
-  app.use("/users", authJwt.verifyToken, userRoutes);
 };
 
 export default routes;
