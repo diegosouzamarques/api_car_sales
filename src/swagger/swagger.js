@@ -1,10 +1,12 @@
+import ip from "ip";
+
 const swaggerDocument = {
   openapi: "3.0.0",
   info: {
     title: "API Anúncios Venda de Automóveis",
     description:
       "Essa APi tem como objetivo disponibilizar CRUD de Anúncios Automotivos",
-    termsOfService: `http://localhost:${process.env.PORT}/terms/`,
+    termsOfService: `http://${ip.address()}:${process.env.PORT}/terms/`,
     contact: {
       name: "API Support",
       url: "https://github.com/diegosouzamarques",
@@ -13,7 +15,7 @@ const swaggerDocument = {
   },
   servers: [
     {
-      url: `http://localhost:${process.env.PORT}`,
+      url: `http://${ip.address()}:${process.env.PORT}`,
       description: "Development server",
     },
   ],
